@@ -17,6 +17,6 @@ arch = case RUBY_PLATFORM
 end
 
 args = $*.map { |x| x.include?(' ') ? "'" + x + "'" : x }
-cmd = File.expand_path "#{File.dirname(__FILE__)}/../libexec/wkhtmltoimage-#{arch}"
+cmd = File.expand_path "/usr/local/bin/wkhtmltoimage"
 
 exec "#{cmd} #{args.join(' ')}"
